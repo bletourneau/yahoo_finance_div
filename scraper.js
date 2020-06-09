@@ -41,7 +41,7 @@ function fetchPage(url, callback) {
 
 function run(db) {
 	// Use request to read in pages.
-	fetchPage("https://morph.io", function (body) {
+	fetchPage("https://finance.yahoo.com/quote/AGG/history?interval=div%7Csplit&filter=div&frequency=1d", function (body) {
 		// Use cheerio to find things in the page with css selectors.
 		var $ = cheerio.load(body);
 
